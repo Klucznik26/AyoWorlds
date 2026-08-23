@@ -133,7 +133,7 @@ body::before {
     --accent: #20f29b;
     background-image:
         linear-gradient(rgba(0,18,10,.12), rgba(0,18,10,.12)),
-        url("assets/portals/apps.png"),
+        url("assets/portals/AyoTools.png"),
         radial-gradient(circle at 50% 40%, #0a6344, #06130e 55%, #030504);
 }
 
@@ -141,7 +141,7 @@ body::before {
     --accent: #28a8ff;
     background-image:
         linear-gradient(rgba(0,10,28,.12), rgba(0,10,28,.12)),
-        url("assets/portals/ayoos.png"),
+        url("assets/portals/AyoOS.png"),
         radial-gradient(circle at 50% 40%, #094c88, #07111d 55%, #030504);
 }
 
@@ -149,7 +149,7 @@ body::before {
     --accent: #f1ae42;
     background-image:
         linear-gradient(rgba(20,11,0,.08), rgba(20,11,0,.08)),
-        url("assets/portals/puste-kolyski.png"),
+        url("assets/portals/PKolyski.png"),
         radial-gradient(circle at 50% 40%, #875520, #171008 55%, #030504);
 }
 
