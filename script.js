@@ -13,7 +13,7 @@ const translations = {
         languageAria: 'Wybór języka',
         worldsAria: 'Światy Ayo',
         appsAria: 'Otwórz AyoTools',
-        osAria: 'AyoOS — w przygotowaniu',
+        osAria: 'Otwórz AyoOS',
         cradlesAria: 'Otwórz Puste Kołyski'
     },
     en: {
@@ -30,7 +30,7 @@ const translations = {
         languageAria: 'Language selection',
         worldsAria: 'Ayo worlds',
         appsAria: 'Open AyoTools',
-        osAria: 'AyoOS — coming soon',
+        osAria: 'Open AyoOS',
         cradlesAria: 'Open Puste Kołyski'
     }
 };
