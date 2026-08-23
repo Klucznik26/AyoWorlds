@@ -1,0 +1,288 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    color-scheme: dark;
+    --bg: #050706;
+    --text: #eef4f1;
+    --muted: #9da9a4;
+    --line: rgba(255,255,255,.11);
+}
+
+html {
+    min-height: 100%;
+    background: var(--bg);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at 50% -10%, rgba(30,90,75,.14), transparent 38rem),
+        linear-gradient(180deg, #080b09 0%, #030504 100%);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .22;
+    background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    background-size: 46px 46px;
+    mask-image: linear-gradient(to bottom, #000, transparent 85%);
+}
+
+.ambient {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 17% 54%, rgba(0,255,156,.08), transparent 25rem),
+        radial-gradient(circle at 50% 54%, rgba(0,140,255,.08), transparent 25rem),
+        radial-gradient(circle at 83% 54%, rgba(255,170,40,.08), transparent 25rem);
+    filter: blur(20px);
+}
+
+.hero {
+    position: relative;
+    z-index: 2;
+    width: min(1500px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 54px 0 30px;
+    text-align: center;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    color: #8fb8a7;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .34em;
+}
+
+.hero h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.15rem, 5vw, 5rem);
+    font-weight: 400;
+    letter-spacing: -.035em;
+}
+
+.lead {
+    margin: 14px auto 0;
+    max-width: 720px;
+    color: var(--muted);
+    font-size: clamp(.95rem, 1.5vw, 1.12rem);
+}
+
+.worlds {
+    position: relative;
+    z-index: 2;
+    width: min(1560px, calc(100% - 40px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.world {
+    --accent: #fff;
+    position: relative;
+    isolation: isolate;
+    min-height: min(67vh, 860px);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    text-decoration: none;
+    color: var(--text);
+    background-color: #0b0e0c;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 30px 80px rgba(0,0,0,.38);
+    transform: translateZ(0);
+    transition: transform .5s cubic-bezier(.2,.8,.2,1), border-color .5s ease, box-shadow .5s ease;
+}
+
+.world::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(to top, rgba(0,0,0,.86) 0%, rgba(0,0,0,.28) 40%, rgba(0,0,0,.04) 68%, rgba(0,0,0,.23) 100%);
+}
+
+.world::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0;
+    background: radial-gradient(circle at 50% 65%, color-mix(in srgb, var(--accent) 28%, transparent), transparent 48%);
+    transition: opacity .45s ease;
+}
+
+.world-apps {
+    --accent: #20f29b;
+    background-image:
+        linear-gradient(rgba(0,18,10,.12), rgba(0,18,10,.12)),
+        url("assets/portals/apps.png"),
+        radial-gradient(circle at 50% 40%, #0a6344, #06130e 55%, #030504);
+}
+
+.world-os {
+    --accent: #28a8ff;
+    background-image:
+        linear-gradient(rgba(0,10,28,.12), rgba(0,10,28,.12)),
+        url("assets/portals/ayoos.png"),
+        radial-gradient(circle at 50% 40%, #094c88, #07111d 55%, #030504);
+}
+
+.world-cradles {
+    --accent: #f1ae42;
+    background-image:
+        linear-gradient(rgba(20,11,0,.08), rgba(20,11,0,.08)),
+        url("assets/portals/puste-kolyski.png"),
+        radial-gradient(circle at 50% 40%, #875520, #171008 55%, #030504);
+}
+
+.world-glow {
+    position: absolute;
+    left: 12%;
+    right: 12%;
+    bottom: -10%;
+    height: 36%;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: .15;
+    background: var(--accent);
+    filter: blur(70px);
+    transition: opacity .45s ease, transform .45s ease;
+}
+
+.world-copy {
+    position: absolute;
+    inset: auto 0 0;
+    display: grid;
+    gap: 7px;
+    padding: 44px 38px 34px;
+}
+
+.world-number {
+    color: var(--accent);
+    font-size: .73rem;
+    font-weight: 800;
+    letter-spacing: .18em;
+}
+
+.world-copy strong {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.8rem, 3vw, 3.25rem);
+    font-weight: 400;
+    text-shadow: 0 2px 20px rgba(0,0,0,.75);
+}
+
+.world-copy small {
+    color: #c0c9c5;
+    font-size: .9rem;
+}
+
+.enter {
+    width: max-content;
+    margin-top: 12px;
+    padding: 9px 0;
+    color: var(--accent);
+    font-size: .86rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    border-bottom: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+.world:hover,
+.world:focus-visible {
+    transform: translateY(-10px) scale(1.012);
+    border-color: color-mix(in srgb, var(--accent) 65%, transparent);
+    box-shadow: 0 38px 100px rgba(0,0,0,.52), 0 0 36px color-mix(in srgb, var(--accent) 12%, transparent);
+    outline: none;
+}
+
+.world:hover::after,
+.world:focus-visible::after {
+    opacity: 1;
+}
+
+.world:hover .world-glow,
+.world:focus-visible .world-glow {
+    opacity: .27;
+    transform: scale(1.12);
+}
+
+footer {
+    position: relative;
+    z-index: 2;
+    width: min(1560px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 26px 0 32px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #67736e;
+    font-size: .72rem;
+    letter-spacing: .08em;
+}
+
+@media (max-width: 980px) {
+    .hero {
+        padding-top: 42px;
+    }
+
+    .worlds {
+        grid-template-columns: 1fr;
+        max-width: 680px;
+    }
+
+    .world {
+        min-height: 72vh;
+    }
+}
+
+@media (max-width: 560px) {
+    .hero,
+    .worlds,
+    footer {
+        width: min(100% - 24px, 680px);
+    }
+
+    .hero {
+        padding: 34px 0 24px;
+    }
+
+    .world {
+        min-height: 68vh;
+        border-radius: 22px;
+    }
+
+    .world-copy {
+        padding: 34px 24px 24px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
