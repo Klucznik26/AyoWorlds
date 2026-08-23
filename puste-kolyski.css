@@ -161,33 +161,12 @@ body::before {
 .book-image {
     position: absolute;
     inset: 0;
-    background-image: url("assets/portals/PusteKolyskiKsiega.png");
+    background-image: url("assets/portals/Prolof1.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     filter: drop-shadow(0 30px 32px rgba(0,0,0,.56));
     transition: transform .45s ease, filter .45s ease;
-}
-
-.book-placeholder {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    display: grid;
-    place-content: center;
-    gap: 8px;
-    color: #b5a58e;
-}
-
-.book-placeholder span {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.8rem, 4vw, 3.6rem);
-    letter-spacing: .12em;
-}
-
-.book-placeholder small {
-    color: #72685a;
-    font-size: .8rem;
 }
 
 .book-stage:hover .book-image,
