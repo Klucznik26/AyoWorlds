@@ -14,7 +14,7 @@ const translations = {
         worldsAria: 'Światy Ayo',
         appsAria: 'Otwórz AyoTools',
         osAria: 'AyoOS — w przygotowaniu',
-        cradlesAria: 'Puste Kołyski — w przygotowaniu'
+        cradlesAria: 'Otwórz Puste Kołyski'
     },
     en: {
         heroTitle: 'Three worlds. One gateway.',
@@ -31,7 +31,7 @@ const translations = {
         worldsAria: 'Ayo worlds',
         appsAria: 'Open AyoTools',
         osAria: 'AyoOS — coming soon',
-        cradlesAria: 'Puste Kołyski — coming soon'
+        cradlesAria: 'Open Puste Kołyski'
     }
 };
 
