@@ -89,6 +89,7 @@ body::before {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
     gap: 18px;
 }
 
@@ -139,6 +140,7 @@ body::before {
 
 .world-os {
     --accent: #28a8ff;
+    min-height: min(84vh, 960px);
     background-image:
         linear-gradient(rgba(0,10,28,.12), rgba(0,10,28,.12)),
         url("assets/portals/AyoOS.png"),
@@ -248,7 +250,8 @@ footer {
         max-width: 680px;
     }
 
-    .world {
+    .world,
+    .world-os {
         min-height: 72vh;
     }
 }
@@ -264,7 +267,8 @@ footer {
         padding: 34px 0 24px;
     }
 
-    .world {
+    .world,
+    .world-os {
         min-height: 68vh;
         border-radius: 22px;
     }
