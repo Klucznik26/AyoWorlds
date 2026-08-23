@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    color-scheme: dark;
+    --bg: #000;
+    --text: #e9eef7;
+    --muted: #8a93a2;
+    --blue: #2aa8ff;
+    --line: rgba(110, 175, 255, .18);
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--bg);
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    background: #000;
+}
+
+.os-topbar {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    border-bottom: 1px solid var(--line);
+    background: rgba(2, 5, 10, .94);
+    box-shadow: 0 10px 34px rgba(0,0,0,.38);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.os-topbar-inner {
+    width: min(1600px, calc(100% - 40px));
+    min-height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.os-brand,
+.os-back {
+    color: #d9e3f0;
+    text-decoration: none;
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .18em;
+    transition: color .2s ease, text-shadow .2s ease;
+}
+
+.os-brand:hover,
+.os-brand:focus-visible,
+.os-back:hover,
+.os-back:focus-visible {
+    color: #fff;
+    text-shadow: 0 0 14px rgba(42,168,255,.35);
+    outline: none;
+}
+
+.os-divider {
+    width: 1px;
+    height: 18px;
+    background: var(--line);
+}
+
+.os-world-name {
+    color: var(--blue);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .22em;
+}
+
+.os-back {
+    margin-left: auto;
+    color: var(--muted);
+    letter-spacing: .08em;
+    font-weight: 700;
+}
+
+.os-empty {
+    min-height: calc(100vh - 61px);
+    background: #000;
+}
+
+@media (max-width: 640px) {
+    .os-topbar-inner {
+        width: min(100% - 24px, 1600px);
+        min-height: 56px;
+    }
+
+    .os-divider,
+    .os-world-name {
+        display: none;
+    }
+
+    .os-brand,
+    .os-back {
+        font-size: .66rem;
+    }
+
+    .os-empty {
+        min-height: calc(100vh - 57px);
+    }
+}
