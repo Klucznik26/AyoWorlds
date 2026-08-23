@@ -184,11 +184,19 @@ body::before {
     letter-spacing: .18em;
 }
 
-.world-copy strong {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.8rem, 3vw, 3.25rem);
-    font-weight: 400;
-    text-shadow: 0 2px 20px rgba(0,0,0,.75);
+.world-title-image {
+    display: block;
+    width: min(88%, 390px);
+    height: 92px;
+    margin: 0;
+    object-fit: contain;
+    object-position: left center;
+    filter: drop-shadow(0 4px 14px rgba(0,0,0,.78));
+}
+
+.world-title-cradles {
+    width: min(78%, 350px);
+    height: 118px;
 }
 
 .world-copy small {
@@ -275,6 +283,16 @@ footer {
 
     .world-copy {
         padding: 34px 24px 24px;
+    }
+
+    .world-title-image {
+        width: min(92%, 360px);
+        height: 84px;
+    }
+
+    .world-title-cradles {
+        width: min(82%, 320px);
+        height: 108px;
     }
 
     footer {
