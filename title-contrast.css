@@ -1,0 +1,46 @@
+.world-copy {
+    z-index: 3;
+    isolation: isolate;
+}
+
+.world-copy::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    top: 18px;
+    bottom: 14px;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 24px;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.82) 0%,
+        rgba(0, 0, 0, 0.64) 34%,
+        rgba(0, 0, 0, 0.36) 62%,
+        rgba(0, 0, 0, 0.10) 82%,
+        rgba(0, 0, 0, 0.00) 100%
+    );
+}
+
+.world-copy > * {
+    position: relative;
+    z-index: 1;
+}
+
+.world-title-image {
+    filter:
+        drop-shadow(0 3px 2px rgba(0, 0, 0, 0.95))
+        drop-shadow(0 10px 20px rgba(0, 0, 0, 0.82))
+        drop-shadow(0 0 8px rgba(255, 45, 55, 0.20));
+}
+
+@media (max-width: 560px) {
+    .world-copy::before {
+        left: 8px;
+        right: 8px;
+        top: 12px;
+        bottom: 8px;
+        border-radius: 18px;
+    }
+}
