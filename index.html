@@ -6,56 +6,80 @@
     <meta name="description" content="AyoWorlds — portal connecting Ayo Apps, AyoOS and Puste Kołyski.">
     <meta name="theme-color" content="#050706">
     <title>AyoWorlds</title>
-    <link rel="stylesheet" href="style.css?v=20260823-2302">
+    <link rel="stylesheet" href="style.css?v=20260823-2341">
     <link rel="stylesheet" href="title-scale.css?v=20260823-2308">
     <link rel="stylesheet" href="title-contrast.css?v=20260823-2330">
 </head>
-<body>
+<body id="top">
     <div class="ambient" aria-hidden="true"></div>
+
+    <nav class="topbar" aria-label="Główna nawigacja" data-i18n-aria="navAria">
+        <div class="topbar-inner">
+            <a class="topbar-brand" href="#top" aria-label="AyoWorlds">
+                <span class="brand-orb" aria-hidden="true"></span>
+                <span>AYO WORLDS</span>
+            </a>
+
+            <div class="world-nav" aria-label="Światy Ayo" data-i18n-aria="worldNavAria">
+                <a href="#ayotools"><span class="nav-dot nav-dot-apps" aria-hidden="true"></span>AyoTools</a>
+                <a href="#ayoos"><span class="nav-dot nav-dot-os" aria-hidden="true"></span>Ayo OS</a>
+                <a href="#puste-kolyski"><span class="nav-dot nav-dot-cradles" aria-hidden="true"></span>Puste Kołyski</a>
+            </div>
+
+            <div class="topbar-actions">
+                <a class="github-link" href="https://github.com/Klucznik26/AyoWorlds" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <div class="language-switch" role="group" aria-label="Wybór języka" data-i18n-aria="languageAria">
+                    <button type="button" class="language-button is-active" data-lang="pl" aria-pressed="true">PL</button>
+                    <span aria-hidden="true">/</span>
+                    <button type="button" class="language-button" data-lang="en" aria-pressed="false">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <header class="hero">
         <p class="eyebrow">AYO WORLDS</p>
-        <h1>Trzy światy. Jedna brama.</h1>
-        <p class="lead">Wybierz portal i przejdź do jednego ze światów Ayo.</p>
+        <h1 data-i18n="heroTitle">Trzy światy. Jedna brama.</h1>
+        <p class="lead" data-i18n="lead">Wybierz portal i przejdź do jednego ze światów Ayo.</p>
     </header>
 
-    <main class="worlds" aria-label="Światy Ayo">
-        <a class="world world-apps" href="https://klucznik26.github.io/AyoWWW/" aria-label="Otwórz Pakiet Ayo">
+    <main class="worlds" aria-label="Światy Ayo" data-i18n-aria="worldsAria">
+        <a id="ayotools" class="world world-apps" href="https://klucznik26.github.io/AyoWWW/" aria-label="Otwórz AyoTools" data-i18n-aria="appsAria">
             <span class="world-glow" aria-hidden="true"></span>
             <span class="world-copy">
                 <span class="world-number">01</span>
                 <img class="world-title-image world-title-apps" src="assets/portals/PerlaAyoTools.png" alt="AyoTools">
-                <small>Aplikacje i narzędzia</small>
-                <span class="enter">Wejdź <span aria-hidden="true">→</span></span>
+                <small data-i18n="appsDescription">Aplikacje i narzędzia</small>
+                <span class="enter"><span data-i18n="enter">Wejdź</span> <span aria-hidden="true">→</span></span>
             </span>
         </a>
 
-        <a class="world world-os" href="#" aria-label="AyoOS — w przygotowaniu" data-coming-soon>
+        <a id="ayoos" class="world world-os" href="#" aria-label="AyoOS — w przygotowaniu" data-coming-soon data-i18n-aria="osAria">
             <span class="world-glow" aria-hidden="true"></span>
             <span class="world-copy">
                 <span class="world-number">02</span>
                 <img class="world-title-image world-title-os" src="assets/portals/PerlaAyoOS.png" alt="Ayo OS">
-                <small>Autorski system operacyjny</small>
-                <span class="enter">Wkrótce</span>
+                <small data-i18n="osDescription">Autorski system operacyjny</small>
+                <span class="enter" data-i18n="soon">Wkrótce</span>
             </span>
         </a>
 
-        <a class="world world-cradles" href="#" aria-label="Puste Kołyski — w przygotowaniu" data-coming-soon>
+        <a id="puste-kolyski" class="world world-cradles" href="#" aria-label="Puste Kołyski — w przygotowaniu" data-coming-soon data-i18n-aria="cradlesAria">
             <span class="world-glow" aria-hidden="true"></span>
             <span class="world-copy">
                 <span class="world-number">03</span>
                 <img class="world-title-image world-title-cradles" src="assets/portals/PerlaPusteKolyski.png" alt="Puste Kołyski">
-                <small>Opowieść i osobny świat</small>
-                <span class="enter">Wkrótce</span>
+                <small data-i18n="cradlesDescription">Opowieść i osobny świat</small>
+                <span class="enter" data-i18n="soon">Wkrótce</span>
             </span>
         </a>
     </main>
 
     <footer>
         <span>© AyoWorlds</span>
-        <span>Software · System · Stories</span>
+        <span data-i18n="footerTagline">Oprogramowanie · System · Opowieści</span>
     </footer>
 
-    <script src="script.js?v=20260823-2217"></script>
+    <script src="script.js?v=20260823-2341"></script>
 </body>
 </html>
