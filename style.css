@@ -13,6 +13,8 @@
 html {
     min-height: 100%;
     background: var(--bg);
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
 }
 
 body {
@@ -50,12 +52,171 @@ body::before {
     filter: blur(20px);
 }
 
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,.09);
+    background: linear-gradient(180deg, rgba(6,10,8,.90), rgba(4,7,5,.76));
+    box-shadow: 0 10px 34px rgba(0,0,0,.24);
+    backdrop-filter: blur(18px) saturate(130%);
+    -webkit-backdrop-filter: blur(18px) saturate(130%);
+}
+
+.topbar-inner {
+    width: min(1560px, calc(100% - 40px));
+    min-height: 62px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(190px, 1fr) auto minmax(190px, 1fr);
+    align-items: center;
+    gap: 24px;
+}
+
+.topbar a {
+    text-decoration: none;
+}
+
+.topbar-brand {
+    width: max-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #dce7e2;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .26em;
+    transition: color .25s ease, text-shadow .25s ease;
+}
+
+.topbar-brand:hover,
+.topbar-brand:focus-visible {
+    color: #fff;
+    text-shadow: 0 0 16px rgba(230,255,246,.25);
+    outline: none;
+}
+
+.brand-orb {
+    width: 9px;
+    height: 9px;
+    border: 1px solid rgba(255,255,255,.72);
+    border-radius: 50%;
+    background: radial-gradient(circle at 34% 28%, #fff 0 18%, #d9e2de 32%, #66716c 66%, #1d2421 100%);
+    box-shadow: 0 0 12px rgba(220,240,232,.26);
+}
+
+.world-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(18px, 3vw, 40px);
+}
+
+.world-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #9eaaa5;
+    font-size: .8rem;
+    white-space: nowrap;
+    transition: color .25s ease, transform .25s ease;
+}
+
+.world-nav a:hover,
+.world-nav a:focus-visible {
+    color: #f2f7f5;
+    transform: translateY(-1px);
+    outline: none;
+}
+
+.nav-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+    transition: box-shadow .25s ease, transform .25s ease;
+}
+
+.nav-dot-apps {
+    color: #20f29b;
+}
+
+.nav-dot-os {
+    color: #28a8ff;
+}
+
+.nav-dot-cradles {
+    color: #f1ae42;
+}
+
+.world-nav a:hover .nav-dot,
+.world-nav a:focus-visible .nav-dot {
+    transform: scale(1.22);
+    box-shadow: 0 0 13px currentColor;
+}
+
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.github-link {
+    color: #87948e;
+    font-size: .78rem;
+    transition: color .25s ease;
+}
+
+.github-link:hover,
+.github-link:focus-visible {
+    color: #f2f7f5;
+    outline: none;
+}
+
+.language-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 10px;
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 999px;
+    background: rgba(255,255,255,.025);
+    color: #52605a;
+}
+
+.language-button {
+    appearance: none;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: #69756f;
+    font: inherit;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    cursor: pointer;
+    transition: color .25s ease, text-shadow .25s ease;
+}
+
+.language-button:hover,
+.language-button:focus-visible {
+    color: #c8d3ce;
+    outline: none;
+}
+
+.language-button.is-active {
+    color: #f4f7f6;
+    text-shadow: 0 0 12px rgba(242,247,245,.24);
+}
+
 .hero {
     position: relative;
     z-index: 2;
     width: min(1500px, calc(100% - 48px));
     margin: 0 auto;
-    padding: 54px 0 30px;
+    padding: 46px 0 30px;
     text-align: center;
 }
 
@@ -249,6 +410,15 @@ footer {
 }
 
 @media (max-width: 980px) {
+    .topbar-inner {
+        grid-template-columns: 1fr auto;
+        gap: 16px;
+    }
+
+    .world-nav {
+        display: none;
+    }
+
     .hero {
         padding-top: 42px;
     }
@@ -265,10 +435,28 @@ footer {
 }
 
 @media (max-width: 560px) {
+    .topbar-inner,
     .hero,
     .worlds,
     footer {
         width: min(100% - 24px, 680px);
+    }
+
+    .topbar-inner {
+        min-height: 56px;
+    }
+
+    .topbar-brand {
+        font-size: .65rem;
+        letter-spacing: .20em;
+    }
+
+    .github-link {
+        display: none;
+    }
+
+    .topbar-actions {
+        gap: 10px;
     }
 
     .hero {
@@ -303,6 +491,10 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
     *, *::before, *::after {
         scroll-behavior: auto !important;
         transition: none !important;
