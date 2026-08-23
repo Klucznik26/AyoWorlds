@@ -87,7 +87,19 @@ body {
 
 .os-empty {
     min-height: calc(100vh - 61px);
+    padding: 4vh 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #000;
+}
+
+.os-logo {
+    display: block;
+    width: min(1320px, 92vw);
+    max-height: calc(100vh - 120px);
+    object-fit: contain;
+    object-position: center;
 }
 
 @media (max-width: 640px) {
@@ -108,5 +120,11 @@ body {
 
     .os-empty {
         min-height: calc(100vh - 57px);
+        padding: 24px 14px;
+    }
+
+    .os-logo {
+        width: 96vw;
+        max-height: calc(100vh - 110px);
     }
 }
