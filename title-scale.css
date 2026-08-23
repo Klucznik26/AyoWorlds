@@ -1,0 +1,23 @@
+.world-title-image {
+    width: min(220%, 975px);
+    height: 230px;
+    max-width: none;
+}
+
+.world-title-cradles {
+    width: min(195%, 875px);
+    height: 295px;
+}
+
+@media (max-width: 560px) {
+    .world-title-image {
+        width: min(230%, 900px);
+        height: 210px;
+        max-width: none;
+    }
+
+    .world-title-cradles {
+        width: min(205%, 800px);
+        height: 270px;
+    }
+}
