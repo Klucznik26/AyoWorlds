@@ -97,7 +97,7 @@ body::before {
     --accent: #fff;
     position: relative;
     isolation: isolate;
-    min-height: min(72vh, 820px);
+    min-height: min(79vh, 900px);
     overflow: hidden;
     border: 1px solid var(--line);
     border-radius: 28px;
