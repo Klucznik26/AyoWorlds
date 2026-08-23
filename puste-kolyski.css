@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    color-scheme: dark;
+    --bg: #070604;
+    --text: #f0ece4;
+    --muted: #a89f91;
+    --gold: #d9ad63;
+    --line: rgba(235, 203, 145, .16);
+}
+
+html {
+    min-height: 100%;
+    background: var(--bg);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at 50% 28%, rgba(171, 104, 28, .10), transparent 34rem),
+        radial-gradient(circle at 50% 72%, rgba(83, 48, 15, .12), transparent 38rem),
+        linear-gradient(180deg, #0b0906 0%, #050403 100%);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .18;
+    background-image:
+        linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: linear-gradient(to bottom, #000, transparent 92%);
+}
+
+.pk-ambient {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 18% 30%, rgba(255, 178, 75, .05), transparent 24rem),
+        radial-gradient(circle at 82% 34%, rgba(255, 205, 125, .04), transparent 28rem);
+    filter: blur(24px);
+}
+
+.pk-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid var(--line);
+    background: rgba(7, 6, 4, .82);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.pk-topbar-inner {
+    width: min(1600px, calc(100% - 40px));
+    min-height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.pk-brand,
+.pk-back {
+    color: #ddd6ca;
+    text-decoration: none;
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .18em;
+}
+
+.pk-brand:hover,
+.pk-back:hover,
+.pk-brand:focus-visible,
+.pk-back:focus-visible {
+    color: #fff;
+    outline: none;
+}
+
+.pk-divider {
+    width: 1px;
+    height: 18px;
+    background: var(--line);
+}
+
+.pk-world-name {
+    color: var(--gold);
+    font-size: .72rem;
+    letter-spacing: .22em;
+}
+
+.pk-back {
+    margin-left: auto;
+    color: #a99f90;
+    letter-spacing: .08em;
+    font-weight: 700;
+}
+
+.pk-main {
+    position: relative;
+    z-index: 1;
+    width: min(1720px, calc(100% - 34px));
+    margin: 0 auto;
+    padding: 42px 0 28px;
+    text-align: center;
+}
+
+.pk-heading {
+    margin-bottom: 24px;
+}
+
+.pk-kicker {
+    margin: 0 0 7px;
+    color: var(--gold);
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .34em;
+}
+
+.pk-heading h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.4rem, 5vw, 5rem);
+    font-weight: 400;
+    letter-spacing: -.025em;
+}
+
+.pk-heading p:last-child {
+    margin: 10px 0 0;
+    color: var(--muted);
+}
+
+.book-stage {
+    position: relative;
+    display: block;
+    width: min(96vw, 1640px);
+    min-height: clamp(430px, 66vw, 1040px);
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid rgba(226, 183, 105, .20);
+    border-radius: 26px;
+    background:
+        radial-gradient(circle at 50% 50%, rgba(170, 105, 31, .10), transparent 46%),
+        rgba(8, 6, 4, .56);
+    box-shadow:
+        0 38px 110px rgba(0,0,0,.54),
+        0 0 44px rgba(190, 124, 39, .05);
+    text-decoration: none;
+}
+
+.book-image {
+    position: absolute;
+    inset: 0;
+    background-image: url("assets/portals/PusteKolyskiKsiega.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: drop-shadow(0 30px 32px rgba(0,0,0,.56));
+    transition: transform .45s ease, filter .45s ease;
+}
+
+.book-placeholder {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    display: grid;
+    place-content: center;
+    gap: 8px;
+    color: #b5a58e;
+}
+
+.book-placeholder span {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.8rem, 4vw, 3.6rem);
+    letter-spacing: .12em;
+}
+
+.book-placeholder small {
+    color: #72685a;
+    font-size: .8rem;
+}
+
+.book-stage:hover .book-image,
+.book-stage:focus-visible .book-image {
+    transform: scale(1.012);
+    filter: drop-shadow(0 34px 38px rgba(0,0,0,.64)) brightness(1.025);
+}
+
+.book-stage:focus-visible {
+    outline: 1px solid rgba(236, 201, 139, .62);
+    outline-offset: 5px;
+}
+
+.pk-hint {
+    margin: 16px 0 0;
+    color: #857b6c;
+    font-size: .78rem;
+}
+
+.pk-footer {
+    position: relative;
+    z-index: 1;
+    width: min(1600px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 16px 0 28px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #665f55;
+    font-size: .7rem;
+    letter-spacing: .08em;
+}
+
+@media (max-width: 720px) {
+    .pk-topbar-inner {
+        width: min(100% - 24px, 1600px);
+        min-height: 56px;
+    }
+
+    .pk-world-name,
+    .pk-divider {
+        display: none;
+    }
+
+    .pk-brand,
+    .pk-back {
+        font-size: .66rem;
+    }
+
+    .pk-main {
+        width: min(100% - 16px, 1720px);
+        padding-top: 30px;
+    }
+
+    .book-stage {
+        width: 100%;
+        min-height: 62vw;
+        border-radius: 18px;
+    }
+
+    .pk-footer {
+        width: min(100% - 24px, 1600px);
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
