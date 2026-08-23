@@ -186,6 +186,76 @@ body::before {
     font-size: .78rem;
 }
 
+.pk-quote {
+    position: relative;
+    width: min(1120px, calc(100% - 32px));
+    margin: 72px auto 34px;
+    padding: clamp(44px, 6vw, 78px) clamp(26px, 7vw, 92px);
+    overflow: hidden;
+    border-top: 1px solid rgba(226, 183, 105, .18);
+    border-bottom: 1px solid rgba(226, 183, 105, .18);
+    background:
+        radial-gradient(circle at 50% 50%, rgba(217, 173, 99, .07), transparent 58%),
+        linear-gradient(90deg, transparent, rgba(255,255,255,.018) 50%, transparent);
+}
+
+.pk-quote::before,
+.pk-quote::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: min(17vw, 190px);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(217, 173, 99, .35));
+}
+
+.pk-quote::before {
+    left: 0;
+}
+
+.pk-quote::after {
+    right: 0;
+    transform: rotate(180deg);
+}
+
+.pk-quote-mark {
+    display: block;
+    margin-bottom: 22px;
+    color: rgba(217, 173, 99, .62);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.pk-quote blockquote {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.42rem, 2.55vw, 2.45rem);
+    font-weight: 400;
+    line-height: 1.46;
+    letter-spacing: -.015em;
+    color: #e7e0d5;
+    text-wrap: balance;
+}
+
+.pk-quote-line {
+    display: block;
+    margin: .18em 0;
+}
+
+.pk-quote-silence {
+    display: block;
+    margin: .44em 0;
+    color: #f1cc8a;
+    font-size: 1.23em;
+    font-style: italic;
+    text-shadow: 0 0 26px rgba(217, 173, 99, .12);
+}
+
+.pk-quote-tail {
+    color: #c8bcaa;
+}
+
 .pk-footer {
     position: relative;
     z-index: 1;
@@ -225,6 +295,17 @@ body::before {
         width: 100%;
         min-height: 62vw;
         border-radius: 18px;
+    }
+
+    .pk-quote {
+        width: 100%;
+        margin-top: 48px;
+        padding: 38px 20px;
+    }
+
+    .pk-quote::before,
+    .pk-quote::after {
+        display: none;
     }
 
     .pk-footer {
