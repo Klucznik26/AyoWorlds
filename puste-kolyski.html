@@ -6,7 +6,7 @@
     <meta name="description" content="Puste Kołyski — prolog.">
     <meta name="theme-color" content="#070604">
     <title>Puste Kołyski — Prolog</title>
-    <link rel="stylesheet" href="puste-kolyski.css?v=20260824-0012">
+    <link rel="stylesheet" href="puste-kolyski.css?v=20260824-0018">
 </head>
 <body>
     <div class="pk-ambient" aria-hidden="true"></div>
@@ -27,16 +27,27 @@
             <p>Otwórz pierwsze strony opowieści.</p>
         </header>
 
-        <a class="book-stage" href="assets/portals/Prolof1.png" target="_blank" rel="noopener noreferrer" aria-label="Otwórz księgę w pełnym rozmiarze">
+        <button class="book-stage" type="button" data-book-open aria-label="Powiększ księgę z prologiem">
             <div class="book-image" role="img" aria-label="Otwarta księga z prologiem Pustych Kołysek"></div>
-        </a>
+        </button>
 
-        <p class="pk-hint">Kliknij księgę, aby otworzyć obraz w pełnej rozdzielczości.</p>
+        <p class="pk-hint">Kliknij księgę, aby ją powiększyć.</p>
     </main>
+
+    <div class="book-lightbox" data-book-lightbox hidden aria-hidden="true">
+        <button class="book-lightbox-backdrop" type="button" data-book-close aria-label="Zamknij powiększenie"></button>
+        <div class="book-lightbox-content" role="dialog" aria-modal="true" aria-label="Powiększona księga z prologiem">
+            <button class="book-lightbox-close" type="button" data-book-close aria-label="Zamknij">×</button>
+            <img src="assets/portals/Prolof1.png" alt="Otwarta księga z prologiem Pustych Kołysek">
+            <p>Esc lub kliknięcie poza księgą zamyka podgląd.</p>
+        </div>
+    </div>
 
     <footer class="pk-footer">
         <span>© AyoWorlds</span>
         <span>Puste Kołyski · Prolog</span>
     </footer>
+
+    <script src="puste-kolyski.js?v=20260824-0018"></script>
 </body>
 </html>
