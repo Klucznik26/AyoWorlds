@@ -200,9 +200,9 @@ body {
     line-height: 1.6;
 }
 
-.os-gallery-link {
+.os-gallery-link,
+.os-feature-link {
     display: inline-flex;
-    margin-top: 24px;
     padding-bottom: 4px;
     border-bottom: 1px solid rgba(42,168,255,.58);
     color: #dcecff;
@@ -213,8 +213,20 @@ body {
     transition: color .18s ease, border-color .18s ease, text-shadow .18s ease;
 }
 
+.os-gallery-link {
+    margin-top: 24px;
+}
+
+.os-feature-link {
+    position: relative;
+    z-index: 1;
+    margin-top: 24px;
+}
+
 .os-gallery-link:hover,
-.os-gallery-link:focus-visible {
+.os-gallery-link:focus-visible,
+.os-feature-link:hover,
+.os-feature-link:focus-visible {
     color: #fff;
     border-color: var(--blue);
     text-shadow: 0 0 14px rgba(42,168,255,.38);
