@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zrzuty ekranu AyoOS — zobacz rozwijany system w działaniu.">
+    <meta name="theme-color" content="#000000">
+    <title>Zrzuty ekranu — AyoOS</title>
+    <link rel="stylesheet" href="ayoos.css?v=20260902-1258">
+    <link rel="stylesheet" href="screenshots.css?v=20260902-1258">
+</head>
+<body>
+    <nav class="os-topbar" aria-label="Nawigacja galerii AyoOS" data-i18n-aria="navAria">
+        <div class="os-topbar-inner">
+            <a class="os-brand" href="index.html">AYO WORLDS</a>
+            <span class="os-divider" aria-hidden="true"></span>
+            <span class="os-world-name">AYO OS / SCREENSHOTS</span>
+
+            <div class="os-topbar-actions">
+                <a class="os-back" href="ayoos.html" data-i18n="back">← Powrót do AyoOS</a>
+                <div class="os-language-switch" role="group" aria-label="Wybór języka" data-i18n-aria="languageAria">
+                    <button type="button" class="language-button is-active" data-lang="pl" aria-pressed="true">PL</button>
+                    <span aria-hidden="true">/</span>
+                    <button type="button" class="language-button" data-lang="en" aria-pressed="false">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="screens-page">
+        <header class="screens-header">
+            <span class="os-section-kicker" data-i18n="kicker">AYOOS W DZIAŁANIU</span>
+            <h1 data-i18n="title">Zrzuty ekranu</h1>
+            <p data-i18n="lead">Galeria pokazuje rzeczywisty stan rozwijanego AyoOS. Kolejne obrazy będą dodawane wraz z rozwojem systemu.</p>
+        </header>
+
+        <section class="screens-grid" aria-label="Galeria zrzutów ekranu AyoOS" data-i18n-aria="galleryAria">
+            <article class="screen-card">
+                <button class="screen-image-button" type="button" data-screen-image="assets/portals/AyoOS_00.png" data-alt-key="screen0Alt" aria-label="Powiększ pierwszy zrzut ekranu AyoOS" data-i18n-aria="screen0Open">
+                    <img src="assets/portals/AyoOS_00.png" alt="Pierwszy publiczny zrzut ekranu AyoOS" data-i18n-alt="screen0Alt" loading="lazy" decoding="async">
+                </button>
+                <div class="screen-copy">
+                    <span class="screen-number">AyoOS_00</span>
+                    <h2 data-i18n="screen0Title">Pierwszy publiczny zrzut</h2>
+                    <p data-i18n="screen0Caption">Pierwszy publiczny zrzut ekranu z rozwijanej wersji AyoOS.</p>
+                </div>
+            </article>
+
+            <article class="screen-card">
+                <button class="screen-image-button" type="button" data-screen-image="AyoOS_01.png" data-alt-key="screen1Alt" aria-label="Powiększ zrzut okna Dyski w AyoOS" data-i18n-aria="screen1Open">
+                    <img src="AyoOS_01.png" alt="Okno Dyski w AyoOS" data-i18n-alt="screen1Alt" loading="lazy" decoding="async">
+                </button>
+                <div class="screen-copy">
+                    <span class="screen-number">AyoOS_01</span>
+                    <h2 data-i18n="screen1Title">Okno „Dyski”</h2>
+                    <p data-i18n="screen1Caption">Widok okna „Dyski” w rozwijanej wersji AyoOS.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <div class="screen-lightbox" aria-hidden="true">
+        <div class="screen-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Powiększony zrzut ekranu" data-i18n-aria="lightboxAria">
+            <button class="screen-lightbox-close" type="button" aria-label="Zamknij podgląd" data-i18n-aria="closeAria">×</button>
+            <img class="screen-lightbox-image" alt="">
+        </div>
+    </div>
+
+    <script src="screenshots.js?v=20260902-1258"></script>
+</body>
+</html>
