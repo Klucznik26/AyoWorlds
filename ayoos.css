@@ -83,11 +83,46 @@ body {
     letter-spacing: .22em;
 }
 
-.os-back {
+.os-topbar-actions {
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.os-back {
     color: var(--muted);
     letter-spacing: .08em;
     font-weight: 700;
+}
+
+.os-language-switch {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #526070;
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.language-button {
+    padding: 5px 0;
+    border: 0;
+    background: transparent;
+    color: #687483;
+    font: inherit;
+    letter-spacing: inherit;
+    cursor: pointer;
+    transition: color .18s ease, text-shadow .18s ease;
+}
+
+.language-button:hover,
+.language-button:focus-visible,
+.language-button.is-active {
+    color: #fff;
+    text-shadow: 0 0 12px rgba(42,168,255,.42);
+    outline: none;
 }
 
 .os-page {
@@ -255,6 +290,7 @@ body {
     .os-topbar-inner {
         width: min(100% - 24px, 1600px);
         min-height: 56px;
+        gap: 10px;
     }
 
     .os-divider,
@@ -264,7 +300,16 @@ body {
 
     .os-brand,
     .os-back {
-        font-size: .66rem;
+        font-size: .64rem;
+    }
+
+    .os-topbar-actions {
+        gap: 12px;
+    }
+
+    .os-language-switch {
+        gap: 5px;
+        font-size: .62rem;
     }
 
     .os-hero {
@@ -321,5 +366,11 @@ body {
 
     .os-feature-card h3 {
         margin-top: 64px;
+    }
+}
+
+@media (max-width: 480px) {
+    .os-back {
+        display: none;
     }
 }
