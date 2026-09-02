@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AYFS2 — autorski system plików AyoOS z wersjonowaniem, rodzinami plików, snapshotami i semantyką wykraczającą poza klasyczne przechowywanie danych.">
+    <meta name="theme-color" content="#000000">
+    <title>AYFS2 — AyoOS</title>
+    <link rel="stylesheet" href="ayoos.css?v=20260902-1258">
+    <link rel="stylesheet" href="ayfs2.css?v=20260902-1258">
+</head>
+<body>
+    <nav class="os-topbar" aria-label="Nawigacja AYFS2" data-i18n-aria="navAria">
+        <div class="os-topbar-inner">
+            <a class="os-brand" href="index.html">AYO WORLDS</a>
+            <span class="os-divider" aria-hidden="true"></span>
+            <span class="os-world-name">AYO OS / AYFS2</span>
+
+            <div class="os-topbar-actions">
+                <a class="os-back" href="ayoos.html" data-i18n="back">← Powrót do AyoOS</a>
+                <div class="os-language-switch" role="group" aria-label="Wybór języka" data-i18n-aria="languageAria">
+                    <button type="button" class="language-button is-active" data-lang="pl" aria-pressed="true">PL</button>
+                    <span aria-hidden="true">/</span>
+                    <button type="button" class="language-button" data-lang="en" aria-pressed="false">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="ayfs-page">
+        <header class="ayfs-hero">
+            <span class="os-section-kicker" data-i18n="kicker">NATYWNY SYSTEM PLIKÓW AYOOS</span>
+            <h1>AYFS2</h1>
+            <p class="ayfs-hero-lead" data-i18n="heroLead">
+                AYFS2 powstaje z założenia, że system plików może rozumieć więcej niż tylko nazwę, katalog i ciąg bajtów. Ma przechowywać także relacje, historię i znaczenie danych.
+            </p>
+            <p class="ayfs-hero-note" data-i18n="heroNote">Projekt jest aktywnie rozwijany jako natywny system plików AyoOS.</p>
+        </header>
+
+        <section class="ayfs-manifesto" aria-labelledby="ayfs-idea-title">
+            <span class="ayfs-big-number" aria-hidden="true">02</span>
+            <div>
+                <span class="os-section-kicker" data-i18n="ideaKicker">POMYSŁ</span>
+                <h2 id="ayfs-idea-title" data-i18n="ideaTitle">Plik nie zawsze jest pojedynczym plikiem</h2>
+                <p data-i18n="ideaText">
+                    W klasycznym systemie plików podgląd, miniatura, metadane czy dokument źródłowy są zwykle niezależnymi obiektami. AYFS2 może traktować je jako jedną rodzinę i zachowywać tę relację podczas kopiowania, przenoszenia, usuwania lub eksportu.
+                </p>
+            </div>
+        </section>
+
+        <section class="ayfs-feature-grid" aria-label="Najważniejsze cechy AYFS2" data-i18n-aria="featuresAria">
+            <article class="ayfs-card ayfs-card-wide">
+                <span class="ayfs-index">01</span>
+                <span class="ayfs-tag" data-i18n="familiesTag">RODZINY PLIKÓW</span>
+                <h2 data-i18n="familiesTitle">Powiązane dane jako jeden logiczny obiekt</h2>
+                <p data-i18n="familiesText">
+                    Rodzina może zawierać plik główny oraz elementy pełniące role MAIN, PREVIEW, META i ATTACHMENT. System może znaleźć wszystkich członków rodziny, przenieść ją razem, pokazać jako całość i ostrzec, gdy eksport poza AYFS2 zgubi część tej semantyki.
+                </p>
+            </article>
+
+            <article class="ayfs-card">
+                <span class="ayfs-index">02</span>
+                <span class="ayfs-tag" data-i18n="versionsTag">HISTORIA</span>
+                <h2 data-i18n="versionsTitle">Wersjonowanie plików</h2>
+                <p data-i18n="versionsText">
+                    AYFS2 może przechowywać do trzech wersji pliku i pozwalać na przywrócenie wcześniejszego stanu. Wersjonowanie jest elementem systemu plików, a nie osobną aplikacją kopiującą dokumenty do ukrytego katalogu.
+                </p>
+            </article>
+
+            <article class="ayfs-card">
+                <span class="ayfs-index">03</span>
+                <span class="ayfs-tag" data-i18n="trashTag">BEZPIECZNE USUWANIE</span>
+                <h2 data-i18n="trashTitle">Kosz świadomy semantyki</h2>
+                <p data-i18n="trashText">
+                    Usunięcie może prowadzić do kosza zamiast natychmiastowego zniszczenia danych. Przywracanie i trwałe czyszczenie są częścią modelu AYFS2, a mechanizmy integralności uwzględniają także obiekty znajdujące się w koszu.
+                </p>
+            </article>
+
+            <article class="ayfs-card">
+                <span class="ayfs-index">04</span>
+                <span class="ayfs-tag" data-i18n="snapshotsTag">STANY SYSTEMU</span>
+                <h2 data-i18n="snapshotsTitle">Snapshoty i klonowanie</h2>
+                <p data-i18n="snapshotsText">
+                    AYFS2 rozwija natywne snapshoty oraz mechanizmy klonowania, dzięki którym można zachować stan danych i pracować na nim bez sprowadzania całej funkcji do ręcznego kopiowania katalogów.
+                </p>
+            </article>
+
+            <article class="ayfs-card">
+                <span class="ayfs-index">05</span>
+                <span class="ayfs-tag" data-i18n="viewsTag">WIDOKI</span>
+                <h2 data-i18n="viewsTitle">Dane można oglądać inaczej niż przez katalogi</h2>
+                <p data-i18n="viewsText">
+                    Widoki AYFS2 pozwalają budować logiczne sposoby prezentowania danych bez zmiany ich fizycznego położenia. Mogą być listowane, odczytywane i eksportowane przez API systemu.
+                </p>
+            </article>
+
+            <article class="ayfs-card ayfs-card-wide">
+                <span class="ayfs-index">06</span>
+                <span class="ayfs-tag" data-i18n="metadataTag">METADANE I INTEGRALNOŚĆ</span>
+                <h2 data-i18n="metadataTitle">System zna strukturę, którą ma chronić</h2>
+                <p data-i18n="metadataText">
+                    Rozbudowane metadane, indeksy i informacje o relacjach są częścią formatu. AYFS2 rozwija mechanizmy Verify, Scrub i FSCK, które sprawdzają nie tylko surowe bloki, ale również spójność struktur i semantyki systemu plików.
+                </p>
+            </article>
+
+            <article class="ayfs-card ayfs-card-wide">
+                <span class="ayfs-index">07</span>
+                <span class="ayfs-tag" data-i18n="exportTag">ŚWIADOMY EKSPORT</span>
+                <h2 data-i18n="exportTitle">Nie udaje, że każdy system plików potrafi to samo</h2>
+                <p data-i18n="exportText">
+                    Gdy dane trafiają na prostszy system plików, część informacji AYFS2 może nie mieć odpowiednika. Dlatego projekt zakłada ostrzeganie o możliwej utracie wersji, relacji rodzinnych, widoków lub metadanych zamiast cichego porzucania tych informacji.
+                </p>
+            </article>
+
+            <article class="ayfs-card">
+                <span class="ayfs-index">08</span>
+                <span class="ayfs-tag" data-i18n="interopTag">INTEGRACJA</span>
+                <h2 data-i18n="interopTitle">POSIX, FUSE i Daraja</h2>
+                <p data-i18n="interopText">
+                    AYFS2 posiada warstwę POSIX, a odczyt przez FUSE umożliwia testowanie danych poza natywnym środowiskiem AyoOS. Funkcje systemu plików są również udostępniane aplikacjom przez Daraja.
+                </p>
+            </article>
+
+            <article class="ayfs-card">
+                <span class="ayfs-index">09</span>
+                <span class="ayfs-tag" data-i18n="goalTag">CEL</span>
+                <h2 data-i18n="goalTitle">System plików jako część doświadczenia AyoOS</h2>
+                <p data-i18n="goalText">
+                    Celem AYFS2 nie jest wyłącznie przechowywanie plików. Ma dostarczać AyoOS funkcje, których aplikacje mogą używać bez budowania osobnych, niekompatybilnych baz danych i własnych mechanizmów historii czy relacji.
+                </p>
+            </article>
+        </section>
+
+        <section class="ayfs-closing">
+            <span class="os-section-kicker" data-i18n="closingKicker">AYOOS-SPECIFIC</span>
+            <h2 data-i18n="closingTitle">Semantyka jest częścią systemu plików</h2>
+            <p data-i18n="closingText">
+                To właśnie ten kierunek — rodziny, wersje, widoki, snapshoty i integralność świadoma tych funkcji — ma odróżniać AYFS2 od klasycznego modelu „plik + katalog”.
+            </p>
+            <a class="ayfs-back-link" href="ayoos.html" data-i18n="bottomBack">← Wróć do AyoOS</a>
+        </section>
+    </main>
+
+    <script src="ayfs2-i18n.js?v=20260902-1258"></script>
+</body>
+</html>
