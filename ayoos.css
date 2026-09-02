@@ -200,6 +200,27 @@ body {
     line-height: 1.6;
 }
 
+.os-gallery-link {
+    display: inline-flex;
+    margin-top: 24px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(42,168,255,.58);
+    color: #dcecff;
+    text-decoration: none;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    transition: color .18s ease, border-color .18s ease, text-shadow .18s ease;
+}
+
+.os-gallery-link:hover,
+.os-gallery-link:focus-visible {
+    color: #fff;
+    border-color: var(--blue);
+    text-shadow: 0 0 14px rgba(42,168,255,.38);
+    outline: none;
+}
+
 .os-identity-section {
     padding: 96px 0 140px;
 }
@@ -337,6 +358,13 @@ body {
 
     .os-section-heading {
         text-align: center;
+    }
+
+    .os-gallery-link {
+        display: flex;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .os-identity-heading {
