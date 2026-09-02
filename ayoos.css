@@ -18,16 +18,21 @@ body {
     background: var(--bg);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
     color: var(--text);
     background: #000;
 }
 
 .os-topbar {
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 10;
     width: 100%;
     border-bottom: 1px solid var(--line);
@@ -85,13 +90,16 @@ body {
     font-weight: 700;
 }
 
-.os-empty {
+.os-page {
+    background: #000;
+}
+
+.os-hero {
     min-height: calc(100vh - 61px);
     padding: 4vh 4vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #000;
 }
 
 .os-logo {
@@ -100,6 +108,56 @@ body {
     max-height: calc(100vh - 120px);
     object-fit: contain;
     object-position: center;
+}
+
+.os-screenshot-section {
+    width: min(1600px, calc(100% - 64px));
+    margin: 0 auto;
+    padding: 88px 0 120px;
+    border-top: 1px solid var(--line);
+}
+
+.os-section-heading {
+    margin-bottom: 28px;
+}
+
+.os-section-kicker {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--blue);
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .24em;
+}
+
+.os-section-heading h1 {
+    margin: 0;
+    color: #f4f8ff;
+    font-size: clamp(1.65rem, 3.2vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -.02em;
+}
+
+.os-screenshot-frame {
+    margin: 0;
+    padding: 12px;
+    border: 1px solid rgba(110, 175, 255, .24);
+    background: rgba(4, 9, 16, .88);
+    box-shadow: 0 28px 80px rgba(0, 0, 0, .48), 0 0 44px rgba(42, 168, 255, .05);
+}
+
+.os-screenshot {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #05070a;
+}
+
+.os-screenshot-frame figcaption {
+    padding: 14px 6px 4px;
+    color: var(--muted);
+    font-size: .78rem;
+    line-height: 1.6;
 }
 
 @media (max-width: 640px) {
@@ -118,7 +176,7 @@ body {
         font-size: .66rem;
     }
 
-    .os-empty {
+    .os-hero {
         min-height: calc(100vh - 57px);
         padding: 24px 14px;
     }
@@ -126,5 +184,18 @@ body {
     .os-logo {
         width: 96vw;
         max-height: calc(100vh - 110px);
+    }
+
+    .os-screenshot-section {
+        width: min(100% - 28px, 1600px);
+        padding: 56px 0 72px;
+    }
+
+    .os-section-heading {
+        text-align: center;
+    }
+
+    .os-screenshot-frame {
+        padding: 7px;
     }
 }
