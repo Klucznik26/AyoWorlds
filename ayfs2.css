@@ -1,0 +1,226 @@
+.ayfs-page {
+    width: min(1600px, calc(100% - 64px));
+    margin: 0 auto;
+    padding-bottom: 120px;
+}
+
+.ayfs-hero {
+    min-height: 62vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 110px 0 90px;
+    border-bottom: 1px solid var(--line);
+}
+
+.ayfs-hero h1 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(4.8rem, 13vw, 10rem);
+    line-height: .88;
+    letter-spacing: -.065em;
+}
+
+.ayfs-hero-lead {
+    max-width: 980px;
+    margin: 34px 0 0;
+    color: #dce7f5;
+    font-size: clamp(1.2rem, 2.1vw, 1.75rem);
+    line-height: 1.55;
+}
+
+.ayfs-hero-note {
+    max-width: 760px;
+    margin: 20px 0 0;
+    color: var(--muted);
+    font-size: .9rem;
+    line-height: 1.7;
+}
+
+.ayfs-manifesto {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(160px, 260px) minmax(0, 1fr);
+    gap: 40px;
+    padding: 100px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.ayfs-big-number {
+    color: rgba(42,168,255,.16);
+    font-size: clamp(7rem, 14vw, 12rem);
+    font-weight: 800;
+    line-height: .8;
+    letter-spacing: -.08em;
+}
+
+.ayfs-manifesto h2,
+.ayfs-closing h2 {
+    max-width: 980px;
+    margin: 0;
+    color: #fff;
+    font-size: clamp(2.2rem, 4.8vw, 4.8rem);
+    line-height: 1.03;
+    letter-spacing: -.045em;
+}
+
+.ayfs-manifesto p,
+.ayfs-closing p {
+    max-width: 900px;
+    margin: 26px 0 0;
+    color: var(--muted);
+    font-size: 1.02rem;
+    line-height: 1.9;
+}
+
+.ayfs-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 96px;
+    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
+}
+
+.ayfs-card {
+    position: relative;
+    min-height: 340px;
+    padding: 34px 34px 42px;
+    overflow: hidden;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background:
+        radial-gradient(circle at 100% 0%, rgba(42,168,255,.07), transparent 42%),
+        rgba(3, 7, 13, .78);
+}
+
+.ayfs-card-wide {
+    grid-column: span 2;
+}
+
+.ayfs-index {
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    color: rgba(42,168,255,.17);
+    font-size: clamp(3.6rem, 7vw, 6rem);
+    font-weight: 800;
+    line-height: .9;
+    letter-spacing: -.06em;
+    pointer-events: none;
+}
+
+.ayfs-tag {
+    position: relative;
+    z-index: 1;
+    display: block;
+    color: var(--blue);
+    font-size: .64rem;
+    font-weight: 800;
+    letter-spacing: .2em;
+}
+
+.ayfs-card h2 {
+    position: relative;
+    z-index: 1;
+    max-width: 920px;
+    margin: 76px 0 18px;
+    color: #fff;
+    font-size: clamp(1.8rem, 3.2vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -.035em;
+}
+
+.ayfs-card p {
+    position: relative;
+    z-index: 1;
+    max-width: 790px;
+    margin: 0;
+    color: var(--muted);
+    font-size: .97rem;
+    line-height: 1.82;
+}
+
+.ayfs-card-wide p {
+    max-width: 1080px;
+}
+
+.ayfs-closing {
+    padding: 110px 0 20px;
+}
+
+.ayfs-back-link {
+    display: inline-flex;
+    margin-top: 34px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(42,168,255,.58);
+    color: #dcecff;
+    text-decoration: none;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+}
+
+.ayfs-back-link:hover,
+.ayfs-back-link:focus-visible {
+    color: #fff;
+    border-color: var(--blue);
+    text-shadow: 0 0 14px rgba(42,168,255,.38);
+    outline: none;
+}
+
+@media (max-width: 760px) {
+    .ayfs-page {
+        width: min(100% - 28px, 1600px);
+        padding-bottom: 70px;
+    }
+
+    .ayfs-hero {
+        min-height: auto;
+        padding: 76px 0 64px;
+        text-align: center;
+    }
+
+    .ayfs-hero-lead,
+    .ayfs-hero-note {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ayfs-manifesto {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 68px 0;
+        text-align: center;
+    }
+
+    .ayfs-big-number {
+        font-size: 6rem;
+    }
+
+    .ayfs-manifesto p,
+    .ayfs-closing p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ayfs-feature-grid {
+        grid-template-columns: 1fr;
+        margin-top: 64px;
+    }
+
+    .ayfs-card,
+    .ayfs-card-wide {
+        grid-column: auto;
+        min-height: 300px;
+        padding: 28px 24px 34px;
+    }
+
+    .ayfs-card h2 {
+        margin-top: 66px;
+    }
+
+    .ayfs-closing {
+        padding-top: 76px;
+        text-align: center;
+    }
+}
